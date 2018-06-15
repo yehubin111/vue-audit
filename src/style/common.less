@@ -1,0 +1,162 @@
+@charset "utf-8";
+@import './color.less';
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button {
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  box-sizing: content-box;
+}
+
+body, button, input, select, textarea {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: arial, '\5FAE\8F6F\96C5\9ED1';
+  color: #333;
+}
+
+input, select, textarea {
+  font-size: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: inherit;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+iframe {
+  display: block;
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.f-red, .f-up {
+  color: @red-stepf4;
+}
+
+.f-mid{
+  color: @yellow-stepfb;
+}
+
+.f-down {
+  color: @green-step57;
+}
+
+.f-pink {
+  color: @red-stepff;
+}
+
+.f-link {
+  color: @blue-step44;
+}
+
+.f-hover {
+  color: @gray-step3;
+  &:hover {
+    color: @red-stepf4;
+  }
+}
+
+.f-redN {
+  color: @red-stepff;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #999;
+  font-weight: normal;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #999;
+  font-weight: normal;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #999;
+  font-weight: normal;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #999;
+  font-weight: normal;
+}
+
+.shadow{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: @black;
+  z-index: 999;
+  opacity: .5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+
+.d-default{
+  text-align: center;
+  line-height: 100px;
+  color: #666;
+}
+
+//多行文本超出显示省略号
+.mul_ell(@line) {
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
